@@ -20,14 +20,14 @@ export default function Hero() {
             <span>FRAMER TEMPLATES</span>
           </div>
 
-          <h1 className="text-white font-medium text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] leading-[1.08] tracking-tight mb-12">
+          <h1 className="text-white font-medium text-4xl sm:text-5xl md:text-[3.5rem] lg:text-[4.5rem] leading-[1.08] tracking-tight mb-12 max-w-[90%] md:max-w-full mx-auto md:mx-0">
             No back-and-forth with{" "}
-            <br className="hidden sm:inline" />
+            <br className="hidden lg:inline" />
             AI. Pick, edit, publish.
           </h1>
         </div>
 
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pt-2 w-full">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pt-2 w-full">
           
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center gap-3.5">
@@ -51,7 +51,7 @@ export default function Hero() {
           </div>
 
           {/* Avatars & Social Proof */}
-          <div className="flex items-center gap-3 self-start lg:self-auto">
+          <div className="flex items-center gap-3 self-start md:self-auto">
             <div className="flex -space-x-2.5 overflow-hidden">
               <Avatar 
                 src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" 
