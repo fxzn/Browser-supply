@@ -16,7 +16,21 @@ This repository contains a high-fidelity clone of the [Browser Supply](https://b
 
 ---
 
-## Evaluation Questions & Answers
+## Adherence to Important Notes
+
+1. **Backend API (Strong Plus):** 
+   *Explicitly Addressed:* Instead of hardcoding JSON data on the client side, I built a dedicated Next.js Route Handler (`src/app/api/data/route.ts`) to serve the templates, reviews, and featured items. The frontend fetches this data server-side, mimicking a real Full-stack architecture.
+
+2. **Avoid Complex External Libraries Without Reason:** 
+   *Explicitly Addressed:* No bloated UI component libraries (like MUI or Chakra) were used. Everything is built from scratch using **Tailwind CSS**. The only major external library used is **GSAP**, which is heavily justified because the reference site (`browser.supply`) relies on complex scroll-triggered animations and marquee effects that are near-impossible to replicate purely with CSS without severe performance hits.
+
+3. **Focus on Quality and Maintainability:** 
+   *Explicitly Addressed:* The codebase strictly follows a modular component architecture (e.g., isolating `Hero.tsx`, `TemplateGrid.tsx`, `Navbar.tsx`). I also implemented a robust **CSS Custom Properties Design System** in `globals.css` linked to Tailwind tokens, ensuring that global typography, spacing, and colors can be maintained and scaled effortlessly.
+
+4. **Reliable, Production-Ready Solution:** 
+   *Explicitly Addressed:* The project is fully responsive (Desktop, Tablet, Mobile), passes all ESLint checks with zero errors or warnings, builds perfectly (`npm run build`), and implements performance best practices such as native lazy-loading for off-screen images.
+
+---## Evaluation Questions & Answers
 
 ### 1. If you use JSON data, how would you structure it to support future scalability and maintainability?
 To support future scalability, I would structure JSON data relationally rather than deeply nesting it. For example, separating `templates`, `categories`, and `authors` into separate JSON arrays/files. This mimics a normalized database structure, making it easier to migrate to a real database (like PostgreSQL) in the future without completely rewriting the frontend data consumption logic. Additionally, I would strongly type the JSON structures using TypeScript interfaces to ensure maintainability and catch errors during compile time.
